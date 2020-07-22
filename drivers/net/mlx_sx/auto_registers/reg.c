@@ -4000,6 +4000,28 @@ MLXSW_ITEM8(reg, ieds, edpr, 0x3, 0, 1);
  */
 MLXSW_ITEM8(reg, ieds, ed_status, 0x7, 0, 4);
 
+/* pulk
+ * ----
+ *
+ */
+/* swid
+ * 
+ * Access: 
+ */
+MLXSW_ITEM8(reg, pulk, swid, 0x0, 0, 8);
+
+/* kvd_index
+ * Index for linear kvd
+ * Access: 
+ */
+MLXSW_ITEM32(reg, pulk, kvd_index, 0x4, 0, 24);
+
+/* dword
+ * 
+ * Access: 
+ */
+MLXSW_ITEM32_INDEXED(reg, pulk, dword, 0x8, 0, 32, 4, 0, false);
+
 /* tnqdr
  * -----
  *

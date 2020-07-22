@@ -1668,6 +1668,34 @@ struct ku_access_ieds_reg {
     uint8_t                 dev_id; /**< dev_id - device id */
 };
 
+#define SXD_PULK_DWORD_NUM 6
+
+typedef struct sxd_pulk_kvd_raw_data {
+    uint32_t dword[SXD_PULK_DWORD_NUM];
+} sxd_pulk_kvd_raw_data_t;
+
+typedef struct sxd_pulk_pulk_record {
+    uint8_t swid;
+    uint32_t kvd_index;
+    sxd_pulk_kvd_raw_data_t kvd_raw_data;
+} sxd_pulk_pulk_record_t;
+
+/**
+ * ku_pulk_reg structure is used to store the PULK register parameters
+ */
+struct ku_pulk_reg {
+    sxd_pulk_pulk_record_t pulk_record;
+};
+
+/**
+ * ku_access_pulk_reg structure is used to store the access register PULK command parameters
+ */
+struct ku_access_pulk_reg {
+    struct ku_operation_tlv op_tlv; /**< op_tlv - operation tlv struct */
+    struct ku_pulk_reg      pulk_reg; /**< pulk_reg - pulk register tlv */
+    uint8_t                 dev_id; /**< dev_id - device id */
+};
+
 /**
  * ku_tnqdr_reg structure is used to store the TNQDR register parameters
  */

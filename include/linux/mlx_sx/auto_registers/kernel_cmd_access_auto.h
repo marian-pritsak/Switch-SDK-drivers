@@ -80,6 +80,7 @@ CTRL_CMD_ACCESS_REG_PEAPS, /**< Run access register PEAPS command */
 CTRL_CMD_ACCESS_REG_IDDD, /**< Run access register IDDD command */
 CTRL_CMD_ACCESS_REG_IEDR, /**< Run access register IEDR command */
 CTRL_CMD_ACCESS_REG_IEDS, /**< Run access register IEDS command */
+CTRL_CMD_ACCESS_REG_PULK, /**< Run access register PULK command */
 CTRL_CMD_ACCESS_REG_TNQDR, /**< Run access register TNQDR command */
 CTRL_CMD_ACCESS_REG_PPAD, /**< Run access register PPAD command */
 CTRL_CMD_ACCESS_REG_TNQCR, /**< Run access register TNQCR command */

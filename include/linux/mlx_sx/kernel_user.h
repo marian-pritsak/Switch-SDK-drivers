@@ -2932,7 +2932,8 @@ typedef enum sxd_flex_acl_action_type {
     SXD_ACTION_TYPE_MIRROR_SAMPLER_E = 19,
     SXD_ACTION_TYPE_UNDEFINDED_E = 20,
     SXD_ACTION_TYPE_PORT_FILTER_EXT_E = 21,
-    SXD_ACTION_TYPE_LAST_E = 22
+    SXD_ACTION_TYPE_LAST_E = 22,
+    SXD_ACTION_TYPE_RAW_ACTION_E = 63
 } sxd_flex_acl_action_type_t;
 
 /**
@@ -3772,6 +3773,10 @@ typedef struct sxd_l4_port_flex_action {
     uint16_t                            l4_port;
 } sxd_l4_port_flex_action_t;
 
+typedef struct {
+    uint32_t raw_dwords[7];
+} sxd_raw_action_flex_action_t;
+
 typedef struct sxd_action_slot {
     sxd_flex_acl_action_type_t type;
     union {
@@ -3793,6 +3798,7 @@ typedef struct sxd_action_slot {
         sxd_sip_dip_flex_action_t             action_sip_dip;
         sxd_l4_port_flex_action_t             action_l4_port;
         sxd_port_filter_ext_flex_action_t     action_port_filter_ext;
+        sxd_raw_action_flex_action_t          action_raw;
     } fields;
 } sxd_action_slot_t;
 
@@ -7406,7 +7412,8 @@ typedef enum sxd_iedr_resource_type {
     SXD_IEDR_RESOURCE_TYPE_RIGRV2_E = 0x26,
     SXD_IEDR_RESOURCE_TYPE_MC_EXPECTED_IRIF_LIST_E = 0x27,
     SXD_IEDR_RESOURCE_TYPE_IPV6_E = 0x28,
-    SXD_IEDR_RESOURCE_TYPE_TNUMT_E = 0x29
+    SXD_IEDR_RESOURCE_TYPE_TNUMT_E = 0x29,
+    SXD_IEDR_RESOURCE_TYPE_POWER_USER_E = 0x2a
 } sxd_iedr_resource_type_e;
 
 typedef enum sxd_iedr_delete_mode {
