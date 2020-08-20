@@ -53,6 +53,7 @@ CTRL_CMD_ACCESS_REG_PECNER, /**< Run access register PECNER command */
 CTRL_CMD_ACCESS_REG_TNEEM, /**< Run access register TNEEM command */
 CTRL_CMD_ACCESS_REG_TNIFR, /**< Run access register TNIFR command */
 CTRL_CMD_ACCESS_REG_PEAPS, /**< Run access register PEAPS command */
+CTRL_CMD_ACCESS_REG_PULK, /**< Run access register PULK command */
 CTRL_CMD_ACCESS_REG_HCOT, /**< Run access register HCOT command */
 CTRL_CMD_ACCESS_REG_CHLTM, /**< Run access register CHLTM command */
 CTRL_CMD_ACCESS_REG_HMON, /**< Run access register HMON command */

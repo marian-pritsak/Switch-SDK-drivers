@@ -689,6 +689,25 @@ uint8_t mlxsw_reg_peapbm_delta_value_get(const char *buf);
 
 void mlxsw_reg_peapbm_delta_value_set(char *buf, uint8_t val);
 
+/* pulk
+ * ----
+ *
+ */
+#define MLXSW_PULK_ID 0xc001
+#define MLXSW_PULK_LEN 0x20
+
+uint8_t mlxsw_reg_pulk_swid_get(const char *buf);
+
+void mlxsw_reg_pulk_swid_set(char *buf, uint8_t val);
+
+uint32_t mlxsw_reg_pulk_kvd_index_get(const char *buf);
+
+void mlxsw_reg_pulk_kvd_index_set(char *buf, uint32_t val);
+
+uint32_t mlxsw_reg_pulk_dword_get(const char *buf, unsigned short index);
+
+void mlxsw_reg_pulk_dword_set(char *buf, unsigned short index, uint32_t val);
+
 /* tnqdr
  * -----
  *
